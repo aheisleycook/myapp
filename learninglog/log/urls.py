@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.urls import path, include
 
-from .views import HomePage
- 
-  
+from .views import HomePage, showForm, Contacts, About, EntryPage
+
 urlpatterns = [
-    path("", HomePage, name="landing")
+    path("", HomePage, name="landing"),
+    path("form/", showForm, name="entryform"),
+    path("contacts/", Contacts, name="Contacts"),
+    path("about/", About, name="about"),
+    path("entry/",EntryPage,name="entryPage"),
+
 ]
